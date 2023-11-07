@@ -35,7 +35,7 @@ def initLogConfig(logger_name='main', log_file='logs/service.log'):
     )
 
     log_file_handler = logging.FileHandler(log_file)
-    log_file_handler.setLevel(logging.INFO)
+    log_file_handler.setLevel(level)
     log_file_handler.setFormatter(log_formatter)
 
     log_console_handler = logging.StreamHandler()
