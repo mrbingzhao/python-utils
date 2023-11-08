@@ -14,7 +14,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='bzutil',
-    version='1.0.5',
+    version='1.0.6',
     author='mrbingzhao',
     author_email='mrbingzhao@qq.com',
     description='Integrates a number of commonly used Python functions, methods, algorithms, and other toolkits for easy reuse.',
