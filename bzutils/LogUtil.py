@@ -17,20 +17,26 @@
 
 import logging
 
+CRITICAL = logging.CRITICAL
+ERROR = logging.ERROR
+WARN = logging.WARN
+INFO = logging.INFO
+DEBUG = logging.DEBUG
+NOTSET = logging.NOTSET
 
-def initLogConfig(logger_name='main', log_file='logs/service.log'):
+def initLogConfig(logger_name='main', log_file='logs/service.log',level=DEBUG):
     '''
     初始化日志配置
-    :param logger_name:默认值为
-    :param log_file: 默认值为logs/service.log
+    :param logger_name:日志logger模块名，默认值为main
+    :param log_file: 日志输出路径，默认值为logs/service.log
+    :param level: 日志级别，默认值为DEBUG
     :return:
     '''
-    level = logging.DEBUG
     logger = logging.getLogger(logger_name)
     logger.setLevel(level)
 
     log_formatter = logging.Formatter(
-        '[%(asctime)s] [%(name)s] [%(levelname)s] - %(message)s',
+        '%(asctime)s.%(msecs)03d %(levelname)s [%(name)s:%(lineno)d] - %(message)s',
         datefmt='%Y-%m-%d %H:%M:%S'
     )
 

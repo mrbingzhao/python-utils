@@ -1,4 +1,4 @@
 # package
-python setup.py sdist bdist_wheel
+python pk.py
 # install
 pip install bzutil
